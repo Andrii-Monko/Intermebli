@@ -1,0 +1,110 @@
+@import '../mixin.scss';
+
+.header {
+    display: flex;
+    justify-content: center;
+    //background-color: firebrick;
+    background-color: #262727;
+
+    .header__container {
+        width: 1440px;
+
+        @include onDesctop {
+            display: grid;
+            grid-template-columns: repeat(12, 90px);
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 5px 0;
+        }
+
+        .header__logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            @include onDesctop {
+                grid-column: 1/2;
+            }
+        }
+
+        .header__nav {
+
+            .header__list {
+                list-style: none;
+                display: flex;
+
+                .header__link {
+                    color: white;
+                    font-size: 20px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin: 0 15px 0 0;
+                }
+
+                .header__icon-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 15px 0 0;
+                    box-sizing: border-boxА;
+
+                    .header__item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .goods-nav {
+            @include onDesctop {
+                grid-column: 2/4;
+                margin: 0 0 0 45px;
+            }
+        }
+
+        .header__title {
+            text-align: center;
+            color: white;
+            font-size: 27px;
+
+            @include onDesctop {
+                grid-column: 7/10;
+            }
+        }
+
+        .contacts-nav {
+            @include onDesctop {
+                grid-column: 10/12;
+            }
+        }
+
+        .header__menu {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 2px solid white;
+            color: white;
+            background-color: #262727;
+
+            @include onDesctop {
+                grid-column: 12;
+                margin: 0 0 0 50px;
+            }
+
+            .header__menu-icon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}

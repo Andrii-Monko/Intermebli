@@ -1,0 +1,21 @@
+@import '../mixin.scss';
+
+.kitchen-detail {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../public/img/kitchen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    //opacity: 0.5;
+
+    .kitchen-detail__container {
+        width: 1440px;
+        height: 100vh;
+
+        @include onDesctop {
+            display: grid;
+            grid-template-columns: repeat(12, 90px);
+            gap: 30px;
+        }
+    }
+}
